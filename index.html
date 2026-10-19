@@ -2,15 +2,15 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="切換 50 Startups 與 Life Expectancy，探索資料、比較線性迴歸模型並互動預測。">
+  <meta name="description" content="切換 50 Startups、Life Expectancy 與 Boston Housing，探索資料、比較特徵選擇方法並互動預測。">
   <meta name="theme-color" content="#f5f6f8"><title>50 Startups · 迴歸分析實驗室</title>
-  <link rel="stylesheet" href="styles.css?v=20261019-life">
-  <script src="data.js" defer></script><script src="life-data.js" defer></script><script src="life-app.js" defer></script><script src="app.js?v=20261019-life" defer></script>
+  <link rel="stylesheet" href="styles.css?v=boston-v1">
+  <script src="data.js" defer></script><script src="life-data.js" defer></script><script src="life-app.js" defer></script><script src="boston-data.js" defer></script><script src="boston-app.js" defer></script><script src="app.js?v=boston-v1" defer></script>
 </head>
 <body>
   <aside class="sidebar">
     <a class="brand" href="#overview"><span class="brand-mark">50<span>↗</span></span><span>STARTUPS<span class="brand-sub">REGRESSION LAB</span></span></a>
-    <div class="dataset-switcher"><label for="dataset-select">資料集 · DATASET</label><select id="dataset-select"><option value="startups">50 Startups</option><option value="life">Life Expectancy（WHO）</option></select><small id="dataset-description">公司支出與利潤</small></div><div class="sidebar-label">分析工作區</div>
+    <div class="dataset-switcher"><label for="dataset-select">資料集 · DATASET</label><select id="dataset-select"><option value="startups">50 Startups</option><option value="life">Life Expectancy（WHO）</option><option value="boston">Boston Housing</option></select><small id="dataset-description">公司支出與利潤</small></div><div class="sidebar-label">分析工作區</div>
     <nav aria-label="主導覽">
       <a href="#overview" data-page="overview"><i data-icon="overview"></i>總覽<span class="nav-dot"></span></a>
       <a href="#selection" data-page="selection"><i data-icon="selection"></i><span id="nav-selection-label">特徵選擇</span><span class="nav-count">5</span></a>

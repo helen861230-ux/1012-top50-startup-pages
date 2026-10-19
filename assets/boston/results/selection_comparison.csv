@@ -1,0 +1,6 @@
+method,n_features,features,cv_rmse,cv_rmse_std,test_rmse,test_r_squared,alpha
+Backward,10,zn | chas | nox | rm | dis | rad | tax | ptratio | black | lstat,5.103291528453561,1.0116030807700167,4.791951461240018,0.7448532060844788,
+Exhaustive,10,zn | chas | nox | rm | dis | rad | tax | ptratio | black | lstat,5.103291528453561,1.0116030807700167,4.791951461240018,0.7448532060844788,
+Forward,10,zn | chas | nox | rm | dis | rad | tax | ptratio | black | lstat,5.103291528453561,1.0116030807700167,4.791951461240018,0.7448532060844788,
+Lasso,13,crim | zn | indus | chas | nox | rm | age | dis | rad | tax | ptratio | black | lstat,5.153870968559401,1.0332505713869036,4.841136396246288,0.7395886359233736,0.0026101572156825357
+RFECV,13,crim | zn | indus | chas | nox | rm | age | dis | rad | tax | ptratio | black | lstat,5.153906420722912,1.032118525129919,4.8463115041674545,0.739031586042544,

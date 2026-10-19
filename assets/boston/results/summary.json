@@ -1,0 +1,38 @@
+{
+  "labeled_rows": 333,
+  "kaggle_test_rows": 173,
+  "train_rows": 266,
+  "validation_rows": 67,
+  "features": [
+    "crim",
+    "zn",
+    "indus",
+    "chas",
+    "nox",
+    "rm",
+    "age",
+    "dis",
+    "rad",
+    "tax",
+    "ptratio",
+    "black",
+    "lstat"
+  ],
+  "exhaustive_subsets": 8191,
+  "cv_folds": 5,
+  "seed": 42,
+  "chosen_method_by_cv": "Backward",
+  "target": "medv",
+  "target_unit": "historical USD 1,000",
+  "capped_target_count": 11,
+  "ols_adjusted_r2": 0.7114765884891414,
+  "BP_p": 0.006883581849268226,
+  "JB_p": 9.079087884303534e-88,
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.9.1",
+    "statsmodels": "0.15.0",
+    "matplotlib": "3.11.2"
+  }
+}

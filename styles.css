@@ -11,3 +11,6 @@
 /* Dataset selector: retained across every analysis page. */
 .dataset-switcher{margin:26px 0 0;padding:12px;background:#f5f8f8;border:1px solid #e3ebe8;border-radius:9px}.dataset-switcher label{display:block;font-size:10px;font-weight:700;letter-spacing:1px;color:#168974;margin-bottom:7px}.dataset-switcher select{width:100%;min-height:38px;background:white;padding:7px 8px;color:#223247;font-size:12px}.dataset-switcher small{display:block;font-size:10px;color:#778294;margin-top:6px}.sidebar-label{margin-top:23px}.brand{font-size:12px;letter-spacing:.5px}.view-selector select{max-width:250px}.life-fields{margin-top:22px}.life-fields small{overflow-wrap:anywhere}.life-fields input{width:100%}.card details{margin-top:12px}.model-comparison-list{margin-top:12px}.table-wrap{max-width:100%}.prediction-value{font-size:38px}.page-subtitle{max-width:820px}
 @media(max-width:800px){.dataset-switcher{margin:12px 0}.sidebar{height:auto}.sidebar-label{display:none}.life-fields{grid-template-columns:1fr}.brand{font-size:13px}}
+
+/* Boston Housing uses the same analysis cards and responsive navigation. */
+[data-b-count]{cursor:pointer}[data-b-count]:focus circle{stroke:#142b43;stroke-width:2}.card details summary{cursor:pointer;color:#168974;font-weight:600}.view-selector select{min-width:160px}.code-block{white-space:pre-wrap;overflow-wrap:anywhere}

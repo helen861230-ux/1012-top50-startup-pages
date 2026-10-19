@@ -1,0 +1,12 @@
+{
+  "competition_url": "https://www.kaggle.com/c/boston-housing",
+  "mirror_url": "https://gist.github.com/Abhinav-Mahapatra/b23f70e2d57ac182a25372b9bb8d4792",
+  "download_note": "Kaggle direct download returned HTTP 401. Public mirror explicitly links to this competition. Original mirror files are tab-separated; normalized to CSV without value changes. No hidden test answers retrieved.",
+  "feature_policy": "13 original predictor columns retained for historical coursework reproduction; ID excluded.",
+  "hashes": {
+    "train.csv": "96bde9eac9c1ba568a0a8bb9034eb0d051d46f8c5bff0b761112487b8e6487d0",
+    "test.csv": "7430af385b7ca8711d724d6fb4321b2571c90e7f9ccfed051aed500fed1240f1",
+    "source_train.tsv": "a1742d6a84f7c5b201e96ae37ee99d6ff82e8b38b2d41256665d1f914525af79",
+    "source_test.tsv": "c15dd306e5247955e6f6ed41f39967bec75ea3ae120d364c9254203b313ce1a4"
+  }
+}
