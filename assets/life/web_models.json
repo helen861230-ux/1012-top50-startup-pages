@@ -1,0 +1,73 @@
+{
+  "Mean baseline": {
+    "intercept": 68.79716281099957,
+    "coefficients": {},
+    "n_features": 0
+  },
+  "Schooling only": {
+    "intercept": 52.023626091941054,
+    "coefficients": {
+      "Schooling": 2.190762933889918
+    },
+    "n_features": 1
+  },
+  "Full OLS": {
+    "intercept": 13.410279646378896,
+    "coefficients": {
+      "Year": 0.03466102814017215,
+      "Infant_deaths": -0.0570093923006619,
+      "Under_five_deaths": -0.046872905362531025,
+      "Adult_mortality": -0.046665895276525635,
+      "Alcohol_consumption": -0.005837604375415714,
+      "Hepatitis_B": -0.007140600414541083,
+      "Measles": 0.0029753664113106996,
+      "BMI": -0.12234070268619804,
+      "Polio": 0.008581261139213113,
+      "Diphtheria": -0.007093530147639334,
+      "Incidents_HIV": 0.09872711466774825,
+      "GDP_per_capita": 1.9119388070150438e-05,
+      "Population_mln": -0.00020250354904164446,
+      "Thinness_ten_nineteen_years": -0.03626673517197593,
+      "Thinness_five_nine_years": 0.02517082339010747,
+      "Schooling": 0.10374597874929667,
+      "Economy_status_Developed": 2.534823994662637,
+      "Region_Asia": 0.41213761143873456,
+      "Region_Central America and Caribbean": 2.067454498832726,
+      "Region_European Union": -0.5585781702452647,
+      "Region_Middle East": 0.30125065606491475,
+      "Region_North America": 0.8187480197456191,
+      "Region_Oceania": -0.7372888675486966,
+      "Region_Rest of Europe": 0.3593300071791646,
+      "Region_South America": 1.829862343407561
+    },
+    "n_features": 25
+  },
+  "Without mortality": {
+    "intercept": -235.12200351346107,
+    "coefficients": {
+      "Year": 0.1324225026357609,
+      "Alcohol_consumption": -0.18551326338363622,
+      "Hepatitis_B": -0.011953040256399655,
+      "Measles": 0.01734606094638222,
+      "BMI": 0.6307892542199063,
+      "Polio": 0.1193306544994572,
+      "Diphtheria": 0.05129295297517489,
+      "Incidents_HIV": -1.1519111847695804,
+      "GDP_per_capita": 9.38864146021168e-05,
+      "Population_mln": 0.0027258599135055587,
+      "Thinness_ten_nineteen_years": -0.07300626388865847,
+      "Thinness_five_nine_years": 0.15003260898530157,
+      "Schooling": 0.4426920783230555,
+      "Economy_status_Developed": 4.446831320166083,
+      "Region_Asia": 4.060999625565813,
+      "Region_Central America and Caribbean": 6.325395821625523,
+      "Region_European Union": 3.79665312056752,
+      "Region_Middle East": 4.612469615709735,
+      "Region_North America": 3.3379927698348313,
+      "Region_Oceania": 2.632623623790992,
+      "Region_Rest of Europe": 4.456897275470743,
+      "Region_South America": 7.019602911300831
+    },
+    "n_features": 22
+  }
+}

@@ -2,20 +2,20 @@
 <html lang="zh-Hant">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="探索 50 Startups 資料，對照五種特徵選擇方案、線性迴歸結果，並互動預測利潤。">
+  <meta name="description" content="切換 50 Startups 與 Life Expectancy，探索資料、比較線性迴歸模型並互動預測。">
   <meta name="theme-color" content="#f5f6f8"><title>50 Startups · 迴歸分析實驗室</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="data.js" defer></script><script src="app.js" defer></script>
+  <script src="data.js" defer></script><script src="life-data.js" defer></script><script src="life-app.js" defer></script><script src="app.js" defer></script>
 </head>
 <body>
   <aside class="sidebar">
     <a class="brand" href="#overview"><span class="brand-mark">50<span>↗</span></span><span>STARTUPS<span class="brand-sub">REGRESSION LAB</span></span></a>
-    <div class="sidebar-label">分析工作區</div>
+    <div class="dataset-switcher"><label for="dataset-select">資料集 · DATASET</label><select id="dataset-select"><option value="startups">50 Startups</option><option value="life">Life Expectancy（WHO）</option></select><small id="dataset-description">公司支出與利潤</small></div><div class="sidebar-label">分析工作區</div>
     <nav aria-label="主導覽">
       <a href="#overview" data-page="overview"><i data-icon="overview"></i>總覽<span class="nav-dot"></span></a>
-      <a href="#selection" data-page="selection"><i data-icon="selection"></i>特徵選擇<span class="nav-count">5</span></a>
+      <a href="#selection" data-page="selection"><i data-icon="selection"></i><span id="nav-selection-label">特徵選擇</span><span class="nav-count">5</span></a>
       <a href="#dataset" data-page="dataset"><i data-icon="dataset"></i>資料探索<span class="nav-count">50</span></a>
-      <a href="#prediction" data-page="prediction"><i data-icon="prediction"></i>利潤預測</a>
+      <a href="#prediction" data-page="prediction"><i data-icon="prediction"></i><span id="nav-prediction-label">利潤預測</span></a>
       <a href="#diagnostics" data-page="diagnostics"><i data-icon="diagnostics"></i>OLS 診斷</a>
       <a href="#source" data-page="source"><i data-icon="source"></i>程式與重現</a>
     </nav>

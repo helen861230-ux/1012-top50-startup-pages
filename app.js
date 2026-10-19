@@ -96,7 +96,7 @@ python -m http.server 8000 --directory web/dist</pre></div><div class="card-foot
  <section class="card">${cardHead('來源與評估界線','對應原始資料與原版 Kaggle Notebook。')}<div class="card-body"><p class="content-note">原 Kaggle Notebook 的作者為 Akash Singh，核心為 OLS、標準化與殘差診斷。原附圖的 1～5 特徵實驗，以及五種自動選擇，為此重現專案新增。表格使用 tabulate 產生。</p><p class="content-note">五折平均 RMSE 用於選擇組合與 alpha，並非 nested CV 的無偏估計。原測試集已在圖片重現時查看過，不據此再挑選方法。50 筆資料規模有限，未來資料的表現仍可能改變。</p><div class="source-links"><a href="https://www.kaggle.com/code/akash17/50-startups-linearregression" target="_blank" rel="noopener">原始 Kaggle Notebook ↗</a><a href="https://www.kaggle.com/datasets/karthickveerakumar/startup-logistic-regression" target="_blank" rel="noopener">原始資料集 ↗</a><a href="https://github.com/helen861230-ux/1012-top50-startup-pages" target="_blank" rel="noopener">GitHub 專案 ↗</a></div></div></section>`;}
 const pages={overview,selection,dataset,prediction,diagnostics,source};
 const titles={overview:'分析總覽',selection:'特徵選擇',dataset:'資料探索',prediction:'利潤預測',diagnostics:'OLS 診斷',source:'程式與重現'};
-function render(){app.innerHTML=pages[state.page]();document.querySelector('#breadcrumb-title').textContent=titles[state.page];document.title=`${titles[state.page]} · 50 Startups Lab`;document.querySelectorAll('nav a').forEach(a=>{a.classList.toggle('active',a.dataset.page===state.page);if(a.dataset.page===state.page)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});fillIcons();if(state.page==='prediction')updatePredictions();}
+function render(){updateDatasetShell();if(window.ACTIVE_DATASET==='life')window.LifeLab.render(state.page);else app.innerHTML=pages[state.page]();document.querySelector('#breadcrumb-title').textContent=window.ACTIVE_DATASET==='life'&&state.page==='prediction'?'壽命預測':window.ACTIVE_DATASET==='life'&&state.page==='selection'?'模型比較':titles[state.page];document.title=`${window.ACTIVE_DATASET==='life'&&state.page==='prediction'?'壽命預測':window.ACTIVE_DATASET==='life'&&state.page==='selection'?'模型比較':titles[state.page]} · ${window.ACTIVE_DATASET==='life'?'Life Expectancy':'50 Startups'} Lab`;document.querySelectorAll('nav a').forEach(a=>{a.classList.toggle('active',a.dataset.page===state.page);if(a.dataset.page===state.page)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current');});fillIcons();if(state.page==='prediction'&&window.ACTIVE_DATASET!=='life')updatePredictions();}
 let toastTimer;function toast(message){const el=document.querySelector('#toast');el.textContent=message;el.classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('visible'),3200);}
 async function copyMarkdown(){try{await navigator.clipboard.writeText(D.markdown.selection);toast('已複製 tabulate 產生的 Markdown 表格');}catch{toast('瀏覽器無法存取剪貼簿，請使用「下載 .md」。');}}
 function updateDataTable(){document.querySelector('#dataset-table').innerHTML=dataTable();}
@@ -106,5 +106,32 @@ app.addEventListener('input',e=>{if(e.target.id==='data-search'){state.search=e.
 app.addEventListener('submit',e=>e.preventDefault());
 app.addEventListener('keydown',e=>{if((e.key==='Enter'||e.key===' ')&&e.target.matches('[data-count]')){e.preventDefault();if(state.chartMode==='reference')state.referenceCount=Number(e.target.dataset.count);else state.curveCount=Number(e.target.dataset.count);render();}});
 function navigate(){const page=location.hash.slice(1)||'overview';state.page=Object.hasOwn(pages,page)?page:'overview';render();window.scrollTo({top:0,behavior:'instant'});}
+
+// The selected dataset is shared by all six pages, persisted and deep-linkable.
+function initialDataset(){
+ const query=new URLSearchParams(location.search).get('dataset');
+ if(query==='life'||query==='startups')return query;
+ try{return localStorage.getItem('regression-lab-dataset')==='life'?'life':'startups';}catch{return 'startups';}
+}
+window.ACTIVE_DATASET=initialDataset();
+function updateDatasetShell(){
+ const life=window.ACTIVE_DATASET==='life';
+ document.querySelector('#dataset-select').value=life?'life':'startups';
+ document.querySelector('#dataset-description').textContent=life?'國家健康與平均壽命':'公司支出與利潤';
+ document.querySelector('.brand').innerHTML=`<span class="brand-mark">${life?'LE':'50'}<span>↗</span></span><span>${life?'LIFE EXPECTANCY':'STARTUPS'}<span class="brand-sub">REGRESSION LAB</span></span>`;
+ document.querySelector('#nav-selection-label').textContent=life?'模型比較':'特徵選擇';
+ document.querySelector('#nav-prediction-label').textContent=life?'壽命預測':'利潤預測';
+ document.querySelector('[data-page="selection"] .nav-count').textContent=life?'4':'5';
+ document.querySelector('[data-page="dataset"] .nav-count').textContent=life?'2,864':'50';
+ document.querySelector('.sidebar-bottom p').innerHTML=life?'179 國 · 25 個編碼特徵<br>2,291 筆訓練 / 573 筆測試':'50 筆資料 · 5 個編碼特徵<br>40 筆訓練 / 10 筆測試';
+ document.querySelector('.download-project').href=life?'assets/life/life_expectancy_analysis.zip':'assets/50_startups_project.zip';
+ document.querySelector('.footer span').textContent=life?'Life Expectancy Regression Lab':'50 Startups Regression Lab';
+}
+document.querySelector('#dataset-select').addEventListener('change',e=>{
+ window.ACTIVE_DATASET=e.target.value==='life'?'life':'startups';
+ try{localStorage.setItem('regression-lab-dataset',window.ACTIVE_DATASET);}catch{}
+ const url=new URL(location.href);url.searchParams.set('dataset',window.ACTIVE_DATASET);history.replaceState(null,'',url);
+ render();
+});
 window.addEventListener('hashchange',navigate);
 navigate();

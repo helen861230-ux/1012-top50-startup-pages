@@ -1,0 +1,49 @@
+                            OLS Regression Results                            
+==============================================================================
+Dep. Variable:        Life_expectancy   R-squared:                       0.984
+Model:                            OLS   Adj. R-squared:                  0.984
+Method:                 Least Squares   F-statistic:                     592.8
+Date:                Mon, 19 Oct 2026   Prob (F-statistic):          1.50e-157
+Time:                        20:21:51   Log-Likelihood:                -3641.6
+No. Observations:                2291   AIC:                             7335.
+Df Residuals:                    2265   BIC:                             7484.
+Df Model:                          25                                         
+Covariance Type:              cluster                                         
+========================================================================================================
+                                           coef    std err          z      P>|z|      [0.025      0.975]
+--------------------------------------------------------------------------------------------------------
+const                                   68.4639      0.227    301.291      0.000      68.018      68.909
+Year                                     0.1613      0.046      3.489      0.000       0.071       0.252
+Infant_deaths                           -1.5811      0.510     -3.098      0.002      -2.582      -0.581
+Under_five_deaths                       -2.1032      0.523     -4.022      0.000      -3.128      -1.078
+Adult_mortality                         -5.4042      0.223    -24.245      0.000      -5.841      -4.967
+Alcohol_consumption                     -0.0233      0.123     -0.189      0.850      -0.265       0.219
+Hepatitis_B                             -0.1161      0.093     -1.245      0.213      -0.299       0.067
+Measles                                  0.0549      0.082      0.667      0.505      -0.106       0.216
+BMI                                     -0.2694      0.147     -1.833      0.067      -0.557       0.019
+Polio                                    0.1299      0.232      0.560      0.576      -0.325       0.585
+Diphtheria                              -0.1109      0.216     -0.514      0.607      -0.534       0.312
+Incidents_HIV                            0.2354      0.159      1.483      0.138      -0.076       0.547
+GDP_per_capita                           0.3296      0.125      2.631      0.009       0.084       0.575
+Population_mln                          -0.0278      0.056     -0.494      0.622      -0.138       0.083
+Thinness_ten_nineteen_years             -0.1594      0.097     -1.637      0.102      -0.350       0.031
+Thinness_five_nine_years                 0.1128      0.097      1.160      0.246      -0.078       0.303
+Schooling                                0.3311      0.186      1.778      0.075      -0.034       0.696
+Economy_status_Developed                 1.0268      0.198      5.197      0.000       0.640       1.414
+Region_Asia                              0.4121      0.341      1.210      0.226      -0.255       1.080
+Region_Central America and Caribbean     2.0675      0.385      5.376      0.000       1.314       2.821
+Region_European Union                   -0.5586      0.534     -1.045      0.296      -1.606       0.489
+Region_Middle East                       0.3013      0.409      0.737      0.461      -0.499       1.102
+Region_North America                     0.8187      0.897      0.913      0.361      -0.940       2.577
+Region_Oceania                          -0.7373      0.515     -1.431      0.153      -1.747       0.273
+Region_Rest of Europe                    0.3593      0.370      0.972      0.331      -0.365       1.084
+Region_South America                     1.8299      0.411      4.457      0.000       1.025       2.634
+==============================================================================
+Omnibus:                       11.278   Durbin-Watson:                   2.038
+Prob(Omnibus):                  0.004   Jarque-Bera (JB):               12.912
+Skew:                           0.104   Prob(JB):                      0.00157
+Kurtosis:                       3.303   Cond. No.                         35.9
+==============================================================================
+
+Notes:
+[1] Standard Errors are robust to cluster correlation (CRV1)
