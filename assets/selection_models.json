@@ -1,0 +1,175 @@
+{
+  "Exhaustive": {
+    "selected_features": [
+      "R&D Spend",
+      "Marketing Spend",
+      "State_Florida"
+    ],
+    "input_features": [
+      "R&D Spend",
+      "Marketing Spend",
+      "State_Florida"
+    ],
+    "alpha": null,
+    "scaled_coefficients": {
+      "R&D Spend": 36322.77548337429,
+      "Marketing Spend": 4172.446057779064,
+      "State_Florida": -467.42342859724386
+    },
+    "scaler_mean": {
+      "R&D Spend": 71663.35800000001,
+      "Marketing Spend": 202141.028,
+      "State_Florida": 0.25
+    },
+    "scaler_scale": {
+      "R&D Spend": 46189.79069592236,
+      "Marketing Spend": 123460.24539263731,
+      "State_Florida": 0.4330127018922193
+    },
+    "raw_coefficients": {
+      "R&D Spend": 0.7863810365042607,
+      "Marketing Spend": 0.03379586720008166,
+      "State_Florida": -1079.4681693046264
+    },
+    "raw_intercept": 46530.07721093426
+  },
+  "Forward": {
+    "selected_features": [
+      "R&D Spend",
+      "Marketing Spend",
+      "State_Florida"
+    ],
+    "input_features": [
+      "R&D Spend",
+      "Marketing Spend",
+      "State_Florida"
+    ],
+    "alpha": null,
+    "scaled_coefficients": {
+      "R&D Spend": 36322.77548337429,
+      "Marketing Spend": 4172.446057779064,
+      "State_Florida": -467.42342859724386
+    },
+    "scaler_mean": {
+      "R&D Spend": 71663.35800000001,
+      "Marketing Spend": 202141.028,
+      "State_Florida": 0.25
+    },
+    "scaler_scale": {
+      "R&D Spend": 46189.79069592236,
+      "Marketing Spend": 123460.24539263731,
+      "State_Florida": 0.4330127018922193
+    },
+    "raw_coefficients": {
+      "R&D Spend": 0.7863810365042607,
+      "Marketing Spend": 0.03379586720008166,
+      "State_Florida": -1079.4681693046264
+    },
+    "raw_intercept": 46530.07721093426
+  },
+  "Backward": {
+    "selected_features": [
+      "R&D Spend",
+      "Marketing Spend",
+      "State_Florida"
+    ],
+    "input_features": [
+      "R&D Spend",
+      "Marketing Spend",
+      "State_Florida"
+    ],
+    "alpha": null,
+    "scaled_coefficients": {
+      "R&D Spend": 36322.77548337429,
+      "Marketing Spend": 4172.446057779064,
+      "State_Florida": -467.42342859724386
+    },
+    "scaler_mean": {
+      "R&D Spend": 71663.35800000001,
+      "Marketing Spend": 202141.028,
+      "State_Florida": 0.25
+    },
+    "scaler_scale": {
+      "R&D Spend": 46189.79069592236,
+      "Marketing Spend": 123460.24539263731,
+      "State_Florida": 0.4330127018922193
+    },
+    "raw_coefficients": {
+      "R&D Spend": 0.7863810365042607,
+      "Marketing Spend": 0.03379586720008166,
+      "State_Florida": -1079.4681693046264
+    },
+    "raw_intercept": 46530.07721093426
+  },
+  "RFECV": {
+    "selected_features": [
+      "R&D Spend",
+      "Marketing Spend"
+    ],
+    "input_features": [
+      "R&D Spend",
+      "Marketing Spend"
+    ],
+    "alpha": null,
+    "scaled_coefficients": {
+      "R&D Spend": 36426.1142133164,
+      "Marketing Spend": 4021.918402623858
+    },
+    "scaler_mean": {
+      "R&D Spend": 71663.35800000001,
+      "Marketing Spend": 202141.028
+    },
+    "scaler_scale": {
+      "R&D Spend": 46189.79069592236,
+      "Marketing Spend": 123460.24539263731
+    },
+    "raw_coefficients": {
+      "R&D Spend": 0.7886182999424611,
+      "Marketing Spend": 0.03257662731702062
+    },
+    "raw_intercept": 46346.33876123659
+  },
+  "Lasso": {
+    "selected_features": [
+      "R&D Spend",
+      "Marketing Spend"
+    ],
+    "input_features": [
+      "R&D Spend",
+      "Administration",
+      "Marketing Spend",
+      "State_Florida",
+      "State_New York"
+    ],
+    "alpha": 1584.893192461114,
+    "scaled_coefficients": {
+      "R&D Spend": 35506.576814756394,
+      "Administration": 0.0,
+      "Marketing Spend": 3102.380639456582,
+      "State_Florida": -0.0,
+      "State_New York": 0.0
+    },
+    "scaler_mean": {
+      "R&D Spend": 71663.35800000001,
+      "Administration": 123391.4115,
+      "Marketing Spend": 202141.028,
+      "State_Florida": 0.25,
+      "State_New York": 0.35
+    },
+    "scaler_scale": {
+      "R&D Spend": 46189.79069592236,
+      "Administration": 25887.54913413334,
+      "Marketing Spend": 123460.24539263731,
+      "State_Florida": 0.4330127018922193,
+      "State_New York": 0.47696960070847283
+    },
+    "raw_coefficients": {
+      "R&D Spend": 0.7687104938081245,
+      "Administration": 0.0,
+      "Marketing Spend": 0.025128579888936423,
+      "State_Florida": -0.0,
+      "State_New York": 0.0
+    },
+    "raw_intercept": 49278.554962941846
+  }
+}

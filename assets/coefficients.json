@@ -1,0 +1,47 @@
+[
+  {
+    "n_features": 1,
+    "intercept": 48416.297661385055,
+    "coefficients": {
+      "R&D Spend": 0.8516227998779368
+    }
+  },
+  {
+    "n_features": 2,
+    "intercept": 46346.338761236606,
+    "coefficients": {
+      "R&D Spend": 0.7886182999424609,
+      "Marketing Spend": 0.03257662731702062
+    }
+  },
+  {
+    "n_features": 3,
+    "intercept": 46100.291305514176,
+    "coefficients": {
+      "R&D Spend": 0.7858709815066741,
+      "Marketing Spend": 0.03327182941032236,
+      "State_New York": 864.0018700527313
+    }
+  },
+  {
+    "n_features": 4,
+    "intercept": 46329.060178542524,
+    "coefficients": {
+      "R&D Spend": 0.785141717311217,
+      "Marketing Spend": 0.033956402340301034,
+      "State_New York": 554.6573328267161,
+      "State_Florida": -826.4681587618976
+    }
+  },
+  {
+    "n_features": 5,
+    "intercept": 42554.16761774433,
+    "coefficients": {
+      "R&D Spend": 0.7734671927329033,
+      "Marketing Spend": 0.0366100258638113,
+      "State_New York": 699.369052518502,
+      "State_Florida": -959.2841600567742,
+      "Administration": 0.032884597536173926
+    }
+  }
+]

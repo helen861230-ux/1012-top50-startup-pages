@@ -1,0 +1,6 @@
+n_features,features,RMSE,R_squared
+1,R&D Spend,8274.868018225987,0.946458760778722
+2,R&D Spend | Marketing Spend,8198.797190788491,0.9474386447268488
+3,R&D Spend | Marketing Spend | State_New York,8309.059683481717,0.9460153830071389
+4,R&D Spend | Marketing Spend | State_New York | State_Florida,8409.916714488048,0.9446968769428332
+5,R&D Spend | Marketing Spend | State_New York | State_Florida | Administration,9137.990152792749,0.9347068473282738

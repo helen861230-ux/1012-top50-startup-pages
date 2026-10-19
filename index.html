@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="探索 50 Startups 資料，對照五種特徵選擇方案、線性迴歸結果，並互動預測利潤。">
+  <meta name="theme-color" content="#f5f6f8"><title>50 Startups · 迴歸分析實驗室</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="data.js" defer></script><script src="app.js" defer></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#overview"><span class="brand-mark">50<span>↗</span></span><span>STARTUPS<span class="brand-sub">REGRESSION LAB</span></span></a>
+    <div class="sidebar-label">分析工作區</div>
+    <nav aria-label="主導覽">
+      <a href="#overview" data-page="overview"><i data-icon="overview"></i>總覽<span class="nav-dot"></span></a>
+      <a href="#selection" data-page="selection"><i data-icon="selection"></i>特徵選擇<span class="nav-count">5</span></a>
+      <a href="#dataset" data-page="dataset"><i data-icon="dataset"></i>資料探索<span class="nav-count">50</span></a>
+      <a href="#prediction" data-page="prediction"><i data-icon="prediction"></i>利潤預測</a>
+      <a href="#diagnostics" data-page="diagnostics"><i data-icon="diagnostics"></i>OLS 診斷</a>
+      <a href="#source" data-page="source"><i data-icon="source"></i>程式與重現</a>
+    </nav>
+    <div class="sidebar-bottom"><div class="data-status"><span></span>已驗證的 Python 結果</div><p>50 筆資料 · 5 個編碼特徵<br>40 筆訓練 / 10 筆測試</p><a href="assets/50_startups_project.zip" download class="download-project"><i data-icon="download"></i>下載完整專案</a><div class="sidebar-foot">Kaggle reproduction · 2026</div></div>
+  </aside>
+  <div class="workspace">
+    <header class="topbar"><span class="breadcrumb">研究專案 <span>/</span> <b id="breadcrumb-title">分析總覽</b></span><div class="topbar-right"><span class="top-status"><span></span>結果已重現</span><a class="github-link" href="https://github.com/helen861230-ux/1012-top50-startup-pages" target="_blank" rel="noopener"><i data-icon="source"></i>GitHub ↗</a></div></header>
+    <main id="app" tabindex="-1"></main>
+    <footer class="footer"><span>50 Startups Regression Lab</span><span>訓練內選擇 · 共用測試集比較 · 可重現的分析</span></footer>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <noscript><p>此分析網頁需要啟用 JavaScript。您也可以下載完整 Python 專案執行。</p></noscript>
+</body>
+</html>

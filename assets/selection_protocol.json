@@ -1,0 +1,675 @@
+{
+  "test_size": 0.2,
+  "split_random_state": 0,
+  "row_id_is_zero_based": true,
+  "train_rows": [
+    33,
+    35,
+    26,
+    34,
+    18,
+    7,
+    14,
+    45,
+    48,
+    29,
+    15,
+    30,
+    32,
+    16,
+    42,
+    20,
+    43,
+    8,
+    13,
+    25,
+    5,
+    17,
+    40,
+    49,
+    1,
+    12,
+    37,
+    24,
+    6,
+    23,
+    36,
+    21,
+    19,
+    9,
+    39,
+    46,
+    3,
+    0,
+    47,
+    44
+  ],
+  "test_rows": [
+    28,
+    11,
+    10,
+    41,
+    2,
+    27,
+    38,
+    31,
+    22,
+    4
+  ],
+  "cv_n_splits": 5,
+  "cv_shuffle": true,
+  "cv_random_state": 42,
+  "selection_criterion": "minimum arithmetic mean of fold RMSE",
+  "cv_std_definition": "population SD across 5 folds; not a confidence interval",
+  "scaling": "StandardScaler fitted inside every CV training fold",
+  "dummy_reference": "California",
+  "feature_columns": [
+    "R&D Spend",
+    "Administration",
+    "Marketing Spend",
+    "State_Florida",
+    "State_New York"
+  ],
+  "state_selection_unit": "individual dummy columns, not grouped State",
+  "lasso_alpha_grid": [
+    0.1,
+    0.12589254117941673,
+    0.15848931924611134,
+    0.19952623149688797,
+    0.251188643150958,
+    0.31622776601683794,
+    0.3981071705534973,
+    0.5011872336272724,
+    0.6309573444801934,
+    0.7943282347242815,
+    1.0,
+    1.2589254117941675,
+    1.584893192461114,
+    1.9952623149688797,
+    2.511886431509581,
+    3.1622776601683795,
+    3.981071705534973,
+    5.011872336272725,
+    6.309573444801933,
+    7.943282347242818,
+    10.0,
+    12.589254117941675,
+    15.848931924611142,
+    19.952623149688808,
+    25.11886431509582,
+    31.622776601683793,
+    39.810717055349734,
+    50.11872336272725,
+    63.095734448019364,
+    79.43282347242821,
+    100.0,
+    125.89254117941675,
+    158.48931924611142,
+    199.52623149688807,
+    251.18864315095823,
+    316.22776601683796,
+    398.1071705534973,
+    501.18723362727246,
+    630.9573444801937,
+    794.3282347242822,
+    1000.0,
+    1258.9254117941687,
+    1584.893192461114,
+    1995.2623149688789,
+    2511.886431509582,
+    3162.2776601683795,
+    3981.0717055349774,
+    5011.872336272725,
+    6309.573444801943,
+    7943.282347242822,
+    10000.0,
+    12589.254117941688,
+    15848.93192461114,
+    19952.62314968883,
+    25118.864315095823,
+    31622.776601683792,
+    39810.71705534977,
+    50118.72336272725,
+    63095.73444801943,
+    79432.82347242821,
+    100000.0
+  ],
+  "lasso_support_rule": "coefficient != 0",
+  "final_estimators": "OLS for first four methods; regularized Lasso for Lasso",
+  "folds": [
+    {
+      "fold": 1,
+      "train_rows": [
+        33,
+        35,
+        26,
+        34,
+        7,
+        14,
+        45,
+        48,
+        29,
+        15,
+        30,
+        16,
+        42,
+        8,
+        13,
+        5,
+        17,
+        40,
+        49,
+        1,
+        12,
+        6,
+        23,
+        36,
+        21,
+        19,
+        9,
+        39,
+        46,
+        3,
+        47,
+        44
+      ],
+      "validation_rows": [
+        18,
+        32,
+        20,
+        43,
+        25,
+        37,
+        24,
+        0
+      ]
+    },
+    {
+      "fold": 2,
+      "train_rows": [
+        33,
+        35,
+        26,
+        34,
+        18,
+        7,
+        45,
+        15,
+        30,
+        32,
+        42,
+        20,
+        43,
+        8,
+        13,
+        25,
+        5,
+        17,
+        40,
+        49,
+        1,
+        37,
+        24,
+        6,
+        23,
+        36,
+        19,
+        9,
+        46,
+        3,
+        0,
+        47
+      ],
+      "validation_rows": [
+        14,
+        48,
+        29,
+        16,
+        12,
+        21,
+        39,
+        44
+      ]
+    },
+    {
+      "fold": 3,
+      "train_rows": [
+        26,
+        34,
+        18,
+        14,
+        45,
+        48,
+        29,
+        15,
+        32,
+        16,
+        42,
+        20,
+        43,
+        13,
+        25,
+        5,
+        17,
+        40,
+        49,
+        12,
+        37,
+        24,
+        6,
+        36,
+        21,
+        19,
+        39,
+        46,
+        3,
+        0,
+        47,
+        44
+      ],
+      "validation_rows": [
+        33,
+        35,
+        7,
+        30,
+        8,
+        1,
+        23,
+        9
+      ]
+    },
+    {
+      "fold": 4,
+      "train_rows": [
+        33,
+        35,
+        18,
+        7,
+        14,
+        45,
+        48,
+        29,
+        15,
+        30,
+        32,
+        16,
+        42,
+        20,
+        43,
+        8,
+        13,
+        25,
+        5,
+        40,
+        1,
+        12,
+        37,
+        24,
+        6,
+        23,
+        21,
+        9,
+        39,
+        0,
+        47,
+        44
+      ],
+      "validation_rows": [
+        26,
+        34,
+        17,
+        49,
+        36,
+        19,
+        46,
+        3
+      ]
+    },
+    {
+      "fold": 5,
+      "train_rows": [
+        33,
+        35,
+        26,
+        34,
+        18,
+        7,
+        14,
+        48,
+        29,
+        30,
+        32,
+        16,
+        20,
+        43,
+        8,
+        25,
+        17,
+        49,
+        1,
+        12,
+        37,
+        24,
+        23,
+        36,
+        21,
+        19,
+        9,
+        39,
+        46,
+        3,
+        0,
+        44
+      ],
+      "validation_rows": [
+        45,
+        15,
+        42,
+        13,
+        5,
+        40,
+        6,
+        47
+      ]
+    }
+  ],
+  "rfecv_fold_subsets": [
+    {
+      "fold": 1,
+      "n_features": 1,
+      "features": [
+        "R&D Spend"
+      ]
+    },
+    {
+      "fold": 2,
+      "n_features": 1,
+      "features": [
+        "R&D Spend"
+      ]
+    },
+    {
+      "fold": 3,
+      "n_features": 1,
+      "features": [
+        "R&D Spend"
+      ]
+    },
+    {
+      "fold": 4,
+      "n_features": 1,
+      "features": [
+        "R&D Spend"
+      ]
+    },
+    {
+      "fold": 5,
+      "n_features": 1,
+      "features": [
+        "R&D Spend"
+      ]
+    },
+    {
+      "fold": 1,
+      "n_features": 2,
+      "features": [
+        "R&D Spend",
+        "Marketing Spend"
+      ]
+    },
+    {
+      "fold": 2,
+      "n_features": 2,
+      "features": [
+        "R&D Spend",
+        "Marketing Spend"
+      ]
+    },
+    {
+      "fold": 3,
+      "n_features": 2,
+      "features": [
+        "R&D Spend",
+        "Marketing Spend"
+      ]
+    },
+    {
+      "fold": 4,
+      "n_features": 2,
+      "features": [
+        "R&D Spend",
+        "Marketing Spend"
+      ]
+    },
+    {
+      "fold": 5,
+      "n_features": 2,
+      "features": [
+        "R&D Spend",
+        "Marketing Spend"
+      ]
+    },
+    {
+      "fold": 1,
+      "n_features": 3,
+      "features": [
+        "R&D Spend",
+        "Administration",
+        "Marketing Spend"
+      ]
+    },
+    {
+      "fold": 2,
+      "n_features": 3,
+      "features": [
+        "R&D Spend",
+        "Marketing Spend",
+        "State_New York"
+      ]
+    },
+    {
+      "fold": 3,
+      "n_features": 3,
+      "features": [
+        "R&D Spend",
+        "Administration",
+        "Marketing Spend"
+      ]
+    },
+    {
+      "fold": 4,
+      "n_features": 3,
+      "features": [
+        "R&D Spend",
+        "Administration",
+        "Marketing Spend"
+      ]
+    },
+    {
+      "fold": 5,
+      "n_features": 3,
+      "features": [
+        "R&D Spend",
+        "Marketing Spend",
+        "State_New York"
+      ]
+    },
+    {
+      "fold": 1,
+      "n_features": 4,
+      "features": [
+        "R&D Spend",
+        "Administration",
+        "Marketing Spend",
+        "State_New York"
+      ]
+    },
+    {
+      "fold": 2,
+      "n_features": 4,
+      "features": [
+        "R&D Spend",
+        "Administration",
+        "Marketing Spend",
+        "State_New York"
+      ]
+    },
+    {
+      "fold": 3,
+      "n_features": 4,
+      "features": [
+        "R&D Spend",
+        "Administration",
+        "Marketing Spend",
+        "State_Florida"
+      ]
+    },
+    {
+      "fold": 4,
+      "n_features": 4,
+      "features": [
+        "R&D Spend",
+        "Administration",
+        "Marketing Spend",
+        "State_Florida"
+      ]
+    },
+    {
+      "fold": 5,
+      "n_features": 4,
+      "features": [
+        "R&D Spend",
+        "Marketing Spend",
+        "State_Florida",
+        "State_New York"
+      ]
+    },
+    {
+      "fold": 1,
+      "n_features": 5,
+      "features": [
+        "R&D Spend",
+        "Administration",
+        "Marketing Spend",
+        "State_Florida",
+        "State_New York"
+      ]
+    },
+    {
+      "fold": 2,
+      "n_features": 5,
+      "features": [
+        "R&D Spend",
+        "Administration",
+        "Marketing Spend",
+        "State_Florida",
+        "State_New York"
+      ]
+    },
+    {
+      "fold": 3,
+      "n_features": 5,
+      "features": [
+        "R&D Spend",
+        "Administration",
+        "Marketing Spend",
+        "State_Florida",
+        "State_New York"
+      ]
+    },
+    {
+      "fold": 4,
+      "n_features": 5,
+      "features": [
+        "R&D Spend",
+        "Administration",
+        "Marketing Spend",
+        "State_Florida",
+        "State_New York"
+      ]
+    },
+    {
+      "fold": 5,
+      "n_features": 5,
+      "features": [
+        "R&D Spend",
+        "Administration",
+        "Marketing Spend",
+        "State_Florida",
+        "State_New York"
+      ]
+    }
+  ],
+  "rfecv_final_ranking": {
+    "R&D Spend": 1,
+    "Administration": 2,
+    "Marketing Spend": 1,
+    "State_Florida": 3,
+    "State_New York": 4
+  },
+  "selection_paths": {
+    "Forward": [
+      [
+        "R&D Spend"
+      ],
+      [
+        "R&D Spend",
+        "Marketing Spend"
+      ],
+      [
+        "R&D Spend",
+        "Marketing Spend",
+        "State_Florida"
+      ],
+      [
+        "R&D Spend",
+        "Administration",
+        "Marketing Spend",
+        "State_Florida"
+      ],
+      [
+        "R&D Spend",
+        "Administration",
+        "Marketing Spend",
+        "State_Florida",
+        "State_New York"
+      ]
+    ],
+    "Backward": [
+      [
+        "R&D Spend",
+        "Administration",
+        "Marketing Spend",
+        "State_Florida",
+        "State_New York"
+      ],
+      [
+        "R&D Spend",
+        "Administration",
+        "Marketing Spend",
+        "State_Florida"
+      ],
+      [
+        "R&D Spend",
+        "Marketing Spend",
+        "State_Florida"
+      ],
+      [
+        "R&D Spend",
+        "Marketing Spend"
+      ],
+      [
+        "R&D Spend"
+      ]
+    ]
+  },
+  "feature_curve_rules": {
+    "Exhaustive": "Lowest training-CV RMSE subset for each count.",
+    "Forward": "One subset per count on the greedy addition path.",
+    "Backward": "One subset per count on the greedy deletion path.",
+    "RFECV": "Training-only full RFE path; CV scores from fold-specific paths.",
+    "Lasso": "Group training-fit nonzero support counts; pick lowest CV RMSE alpha per observed count. Missing counts are not interpolated. Zero-support candidates omitted unless the CV-selected model has zero support.",
+    "evaluation": "All per-count models are fixed before test outcomes are accessed. Test curves are descriptive and never select a method or count."
+  },
+  "interpretation": "CV scores tune the selectors, not unbiased nested-CV scores. The 10-row holdout was previously inspected in image reproduction; do not choose a winning scheme from test scores."
+}
